@@ -1,1 +1,4 @@
-SELECT COUNT(*) FROM pokemons WHERE secondary_type IS NOT NULL;
+select count(pokemon_id) as pokemon_count
+from pokemon_trainer
+group by pokemon_id
+having count(trainerID) = 1
